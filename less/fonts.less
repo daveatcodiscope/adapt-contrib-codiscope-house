@@ -1,17 +1,32 @@
 // Font setup
-// ==========
+// ============= OLD VANILLA THEME STYLES ARE COMMENTED OUT
 
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// add Gibson too - use this as a display font for H1 and other selectors - we should have WOFF files, but where can we host them in Adapt?
+
+@font-face {
+  font-family:gibson;
+  src:url("../fonts/Gibson-Regular-webfont.woff");
+}
+
+@font-face {
+  font-family:gibson;src:url("../fonts/Gibson-Bold-webfont.woff");
+  font-weight:bold;
+}
 
 @font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-@font-family-display: 'Montserrat', Open Sans, Arial, sans-serif;
 
 @font-weight-light: 300;
 @font-weight-regular: 400;
 @font-weight-bold: 700;
 
-@menu-title-font-size: 48px;
+// override Open Sans for Gibson for Menu Title
+@menu-title-font-family: 'Gibson', Helvetica, Arial, sans-serif;
+
+// @menu-title-font-size: 48px;
+@menu-title-font-size: 60px;
+
 @page-title-font-size: 48px;
 @component-title-font-size: 36px;
 @item-title-font-size: 24px;
@@ -30,16 +45,19 @@
 // Detailed Font setup
 // ===================
 
-@menu-title-font-weight: @font-weight-light;
+//@menu-title-font-weight: @font-weight-light;
+@menu-title-font-weight: @font-weight-bold;
 @menu-title-line-height: @title-line-height;
 
-@page-title-font-weight: @font-weight-light;
+//@page-title-font-weight: @font-weight-light;
+@page-title-font-weight: @font-weight-bold;
 @page-title-line-height: @title-line-height;
 
 @component-title-font-weight: @font-weight-light;
 @component-title-line-height: @title-line-height;
 
-@item-title-font-weight: @font-weight-light;
+//@item-title-font-weight: @font-weight-light;
+@item-title-font-weight: @font-weight-bold;
 @item-title-line-height: @title-line-height;
 
 @sub-title-font-weight: @font-weight-light;
@@ -51,5 +69,6 @@
 @instruction-text-font-weight: @font-weight-bold;
 @instruction-text-line-height: @body-line-height;
 
-@button-text-font-weight: @font-weight-light;
+//@button-text-font-weight: @font-weight-light;
+@button-text-font-weight: @font-weight-bold;
 @button-text-line-height: @body-line-height;
